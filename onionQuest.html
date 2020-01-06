@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Onion Quest</title>
+		<h2>Onion Quest</h2>
+		
+		<style>
+			
+			
+			
+			* {
+				box-sizing: border-box;
+			}
+
+			/* Create two equal columns that floats next to each other */
+			.column {
+			float: left;
+			width: 30%;
+			padding: 10px;
+			height: 200px; /* Should be removed. Only for demonstration */
+			}
+
+			.column2 {
+			float: left;
+			width: 30%;
+			padding: 10px;
+			height: 50px; /* Should be removed. Only for demonstration */
+			}
+			.column3 {
+			float: left;
+			width: 70%;
+			padding: 10px;
+			height: 50px; /* Should be removed. Only for demonstration */
+			}
+			/* Clear floats after the columns */
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
+			
+		</style>
+    </head>
+    <!--<body>-->
+	<div class="row">
+        <div class="column2" >
+			<button onmousedown=oncl()>Attack</button>
+			<button onmousedown="test()">test</button>
+        </div>
+		<div class="column3" style="background-color:#fff;">
+			<p id="thoughtBox">Welcome to Onion Quest</p>
+		</div>
+    </div>
+     
+
+
+		<div class="row">
+		  <div class="column" >
+			<h2>enemy health</h2>
+			<p id="p">0 points</p>
+		  </div>
+		  <div class="column" >
+			<h2>quests</h2>
+			<button id="questButton" onmousedown="embark();">embark</button>
+			<p id="questTime">0</p>
+		  </div>
+		  <div class="column" 
+			<h2>loot</h2>
+			<p id="coin">0 coins</p>
+		  </div>
+		</div>
+		<div class="row">
+			<div class="column" >
+				<h2>upgrade</h2>
+				<p>more damage</p>
+				<button onmousedown="damageUpgrade();" id="damage">10 coins</button>
+			</div>
+			<div class="column" >
+				<h2>Location</h2>
+				<p id="Loca">green hill zone</p>
+				<select id="locationBox" onchange="cLocation();">
+					<option value="whiteHills">White Hills</option>
+					<option value="mountan">Mountan</option
+				</select>
+			</div>
+		</div>
+		
+	<script src="code.js">
+	</script>
+    </body>
+</html>
